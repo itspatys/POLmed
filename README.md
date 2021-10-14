@@ -9,4 +9,4 @@ https://www.figma.com/file/oySDRPmVNpFDbZ4oxg8Uhp/Projekt-POLmed?node-id=133%3A2
 
 This years figma:
 
-https://www.figma.com/files/project/40424702/POLmed-Webpage?fuid=955437243944192181
+https://www.figma.com/file/0IBz10XCpA3gmxVq82TLdB/polmed-web?node-id=0%3A1
