@@ -1,8 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import Navbar from "./containers/Navbar"
+
 const App = () => {
-	return <h1>POLmed</h1>;
+	return(
+		<>
+			<Navbar />
+		</>
+	);
 };
 
 ReactDOM.render(React.createElement(App), document.getElementById("root"));

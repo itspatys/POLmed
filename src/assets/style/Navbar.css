@@ -1,0 +1,38 @@
+@import url("./settings.css");
+
+.navbar-container {
+	font-family: "Roboto", sans-serif;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 120px;
+	justify-items: center;
+	align-items: center;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.navbar-container > div > * {
+	display: inline;
+	padding: 0 20px;
+	cursor: pointer;
+}
+
+.navbar-logo {
+	max-height: auto;
+}
+
+.navbar-logo > img {
+	height: 85px;
+	max-height: 100%;
+	object-fit: contain;
+}
+
+.navbar-link-logout {
+	color: white;
+	background-color: #0040af;
+	padding: 10px 20px !important;
+}
