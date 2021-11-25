@@ -5,14 +5,22 @@
 
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 2vw;
 	grid-template-rows: 120px;
 	justify-items: center;
 	align-items: center;
+	user-select: none;
 
-	position: fixed;
+	position: sticky;
 	top: 0;
 	left: 0;
 	width: 100%;
+	background-color: white;
+	z-index: 5;
+}
+
+.navbar-container > * {
+	background-color: white;
 }
 
 .navbar-container > div > * {
@@ -33,6 +41,109 @@
 
 .navbar-link-logout {
 	color: white;
-	background-color: #0040af;
+	/* background-color: #0040af; */
 	padding: 10px 20px !important;
+	background-size: 200% auto;
+	background-image: linear-gradient(
+		to right,
+		rgb(4, 75, 184) 0%,
+		rgb(32, 137, 202) 51%,
+		#0042bd 100%
+	);
+	transition: 500ms;
+	box-shadow: 0 0 20px #eee;
+}
+
+.navbar-link-logout:hover {
+	/* background-color: #003185; */
+	background-position: right center;
+}
+
+.navbar-mobile {
+	display: none;
+}
+
+.navbar-menu {
+	position: fixed;
+	background: rgb(255, 255, 255);
+	background: linear-gradient(
+		360deg,
+		rgba(255, 255, 255, 1) 90%,
+		rgba(0, 0, 0, 0) 100%
+	);
+	font-family: "Roboto", sans-serif;
+	height: 100vh;
+	width: 80vw;
+	left: 100%;
+	top: 0;
+	z-index: 4;
+
+	display: grid;
+	grid-template-rows: 1fr repeat(5, 2em) 1fr;
+	grid-gap: 1em;
+	align-items: center;
+	align-content: center;
+	justify-items: center;
+	transition: 150ms ease-in;
+}
+
+.navbar-menu > div {
+	text-align: center;
+	font-size: 1.3em;
+	cursor: pointer;
+	user-select: none;
+	padding: 0.5em;
+}
+
+.is-shown {
+	left: 20vw;
+}
+
+.navbar-menu-darken {
+	background-color: gray;
+	pointer-events: none;
+	opacity: 20%;
+	position: fixed;
+	height: 100vh;
+	width: 100vw;
+	left: 0;
+	top: 0;
+	transition: opacity 150ms ease-in;
+	z-index: 3;
+}
+.navbar-menu-darken.is-darken {
+	opacity: 0%;
+	left: 100%;
+}
+
+@media screen and (min-width: 651px) {
+	.navbar-menu-darken,
+	.navbar-menu {
+		display: none;
+	}
+}
+@media screen and (max-width: 650px) {
+	.navbar-desktop {
+		display: none;
+	}
+	.navbar-mobile {
+		display: block;
+		z-index: 3;
+		cursor: pointer;
+	}
+	.navbar-hamburger {
+		pointer-events: none;
+	}
+	.hamburger,
+	.hamburger-box,
+	.hamburger-inner {
+		pointer-events: none;
+	}
+	.navbar-container {
+		grid-template-rows: 65px;
+		grid-template-columns: auto 1fr auto;
+	}
+	.navbar-logo > img {
+		height: 52px;
+	}
 }
