@@ -1,6 +1,6 @@
 # POLmed
 
-Simple webpage for making medical appointments. Written in React.js.
+Simple frontend for making medical appointments. Written in React.js.
 
 ## Links
 
