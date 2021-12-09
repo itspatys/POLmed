@@ -1,0 +1,165 @@
+@import url("./settings.css");
+:root {
+	--main-blue: #0040af;
+	--seconadry-blue: #2292eb;
+	--green: #5baf19;
+	--red: rgb(189, 0, 0);
+}
+.doctor-elem {
+	font-family: "Roboto", sans-serif;
+	display: grid;
+	grid-template-columns: 40% 30% 25% 5%;
+	border: 3px solid var(--main-blue);
+	border-radius: 10px;
+	height: 80%;
+	width: 60%;
+	background-color: white;
+	box-sizing: border-box;
+}
+/* image */
+.image-container {
+	background-color: var(--main-blue);
+	display: grid;
+	align-items: center;
+}
+
+.image-container img {
+	object-fit: cover;
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	max-height: 140px;
+	transform: translate(-50%, 0);
+}
+.white-cover {
+	background-color: rgb(255, 255, 255);
+	width: 70%;
+	height: 75%;
+	margin-left: 15%;
+	position: relative;
+	border-radius: 20px;
+	text-align: center;
+}
+
+/* info */
+.doctor-info {
+	text-align: center;
+	position: relative;
+}
+
+.doctor-info > div:not(.doctor-status) {
+	font-weight: bold;
+	font-size: 1.5vw;
+}
+
+.doctor-status {
+	font-size: 1vw;
+	bottom: 10px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
+/* doctor button */
+
+.doctor-button {
+	color: white;
+	background-size: 200% auto;
+	background-image: linear-gradient(
+		to right,
+		rgb(4, 75, 184) 0%,
+		rgb(32, 137, 202) 51%,
+		#0042bd 100%
+	);
+	transition: 500ms;
+	box-shadow: 0 0 20px #eee;
+	text-align: center;
+	border-radius: 10px;
+	height: 60%;
+	margin-top: 25%;
+	margin-right: 5%;
+	margin-left: 5%;
+	font-size: 1.2vw;
+}
+.doctor-button-disabled {
+	filter: grayscale(100%);
+}
+
+.doctor-button:hover {
+	background-position: right center;
+}
+.doctor-button-disabled:hover {
+	background-position: left center;
+}
+.doctor-button > div {
+	padding-top: 2.5rem;
+}
+
+/* status bar */
+.status-bar-green,
+.status-bar-red {
+	border-bottom-right-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+.status-bar-green {
+	background-color: var(--green);
+}
+
+.status-bar-red {
+	background-color: var(--red);
+}
+
+@media screen and (max-width: 650px) {
+	.doctor-button,
+	.status-bar-red,
+	.status-bar-green {
+		margin: 0;
+		border-radius: 0;
+	}
+
+	.doctor-elem {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr 15%;
+		height: 90%;
+	}
+
+	.image-container {
+		grid-column: 1;
+		grid-row: 1/3;
+	}
+	.doctor-info {
+		grid-column: 2;
+		grid-row: 1/2;
+	}
+	.doctor-button {
+		grid-column: 2;
+		grid-row: 2/3;
+	}
+	.status-bar-green,
+	.status-bar-red {
+		grid-column: 1/3;
+		grid-row: 3;
+		border-bottom-right-radius: 8px;
+		border-bottom-left-radius: 8px;
+		border-top-right-radius: 0px;
+	}
+	.doctor-status {
+		padding-top: 1.5vw;
+		font-size: 1.2vw !important;
+	}
+
+	.doctor-button {
+		height: 100%;
+		box-shadow: none;
+	}
+	.doctor-button > div {
+		padding-top: 1.2rem !important;
+		font-size: 2.5vw !important;
+	}
+
+	.doctor-status {
+		text-align: center;
+		font-size: 1.2vw;
+	}
+}
