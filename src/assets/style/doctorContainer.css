@@ -1,0 +1,19 @@
+.doctor-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: justify;
+	grid-gap: 50px;
+}
+
+.doctor-elem {
+	margin-left: 20%;
+	margin-right: 10%;
+	margin-top: 10%;
+}
+
+@media screen and (max-width: 1100px) {
+	.doctor-container {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+}
