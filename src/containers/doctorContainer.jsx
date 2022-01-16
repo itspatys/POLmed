@@ -14,24 +14,28 @@ class DoctorContainer extends Component {
 					name="Jerzy Michałek"
 					status="true"
 					img={doc1}
+					id={1}
 				/>
 				<DoctorComponent
 					title="dr n. med."
 					name="Henryk Kowalski"
 					status="false"
 					img={doc2}
+					id={2}
 				/>
 				<DoctorComponent
 					title="dr n. med."
 					name="Magdalena Harnaś"
 					status="true"
 					img={doc3}
+					id={3}
 				/>
 				<DoctorComponent
 					title="dr n. med."
 					name="Jerzy Owsiak"
 					status="true"
 					img={doc4}
+					id={4}
 				/>
 			</div>
 		);

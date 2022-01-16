@@ -1,4 +1,5 @@
-import React from "react";
+import { useCallback } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "./../assets/img/logo.png";
 import "./../assets/style/Navbar.css";
 
@@ -11,12 +12,17 @@ const Navbar = () => {
 			"is-shown"
 		);
 	};
-
+	const navigate = useNavigate()
+	const handleNavigation = useCallback(() => navigate('/', {replace: true}), [navigate]);
+	
 	return (
 		<>
 			<div className="navbar-container">
 				<div>
-					<div className="navbar-logo">
+					<div 
+						className="navbar-logo"
+						onClick={handleNavigation}
+					>
 						<img src={logo}></img>
 					</div>
 				</div>
