@@ -40,8 +40,8 @@ class DoctorComponent extends Component {
 
 	setStatusText() {
 		return this.props.status == "true"
-			? "Dostępne terminy w tym tygodniu"
-			: "Brak dostępnych terminów w tym tygodniu";
+			? "Terminy w tym tygodniu"
+			: "Brak terminów w tym tygodniu";
 	}
 }
 export default DoctorComponent;

@@ -7,18 +7,15 @@ body {
 	background-image: url(../img/background2.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
+	min-height: 100vh;
 }
 @media screen and (max-width: 1100px) {
 	body {
 		background-image: url(../img/background2_rotated.png);
-		background-size: cover;
-		background-repeat: no-repeat;
 	}
 }
 @media screen and (max-width: 600px) {
 	body {
 		background-image: url(../img/background2_rotated.png);
-		background-size: cover;
-		background-repeat: repeat-y;
 	}
 }

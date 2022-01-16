@@ -5,6 +5,7 @@
 	--green: #5baf19;
 	--red: rgb(189, 0, 0);
 }
+
 .doctor-elem {
 	font-family: "Roboto", sans-serif;
 	display: grid;
@@ -12,13 +13,13 @@
 	border: 3px solid var(--main-blue);
 	border-radius: 10px;
 	min-height: 10em;
-	min-width: 90%;
+	min-width: 95%;
 	max-width: 95%;
 	background-color: white;
 	box-sizing: border-box;
 	overflow: hidden;
 }
-/* image */
+
 .image-container {
 	background-color: var(--main-blue);
 	display: grid;
@@ -34,6 +35,7 @@
 	max-width: 80%;
 	transform: translate(-50%, 0);
 }
+
 .white-cover {
 	background-color: rgb(255, 255, 255);
 	width: 70%;
@@ -44,7 +46,6 @@
 	text-align: center;
 }
 
-/* info */
 .doctor-info {
 	text-align: center;
 	position: relative;
@@ -54,17 +55,12 @@
 
 .doctor-info > div:not(.doctor-status) {
 	font-weight: bold;
-	/* font-size: 1.5vw; */
 }
 
 .doctor-status {
-	/* font-size: 1vw; */
 	bottom: 10px;
-	/* margin-bottom: 0px; */
 	text-align: center;
 }
-
-/* doctor button */
 
 .doctor-button {
 	color: white;
@@ -97,14 +93,11 @@
 .doctor-button:hover {
 	background-position: right center;
 }
+
 .doctor-button-disabled:hover {
 	background-position: left center;
 }
-.doctor-button > div {
-	/* padding-top: 2.5rem; */
-}
 
-/* status bar */
 .status-bar-green,
 .status-bar-red {
 	border-bottom-right-radius: 8px;
@@ -155,10 +148,6 @@
 		border-bottom-left-radius: 8px;
 		border-top-right-radius: 0px;
 	}
-	.doctor-status {
-		/* padding-top: 1.5vw; */
-		/* font-size: 1.2vw !important; */
-	}
 
 	.doctor-button {
 		height: 100%;
@@ -171,13 +160,8 @@
 		height: unset;
 		width: unset;
 	}
-	.doctor-button > div {
-		/* padding-top: 1.2rem !important; */
-		/* font-size: 2.5vw !important; */
-	}
 
 	.doctor-status {
 		text-align: center;
-		/* font-size: 1.2vw; */
 	}
 }
