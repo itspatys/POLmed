@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import "./../assets/style/doctorComponent.css";
 class DoctorComponent extends Component {
 	render() {
@@ -18,9 +19,12 @@ class DoctorComponent extends Component {
 					</div>
 					<div className="doctor-status">{this.setStatusText()}</div>
 				</div>
-				<div className={this.setStatusButtonClass()}>
+				<Link 
+					to={`/appointments/${this.props.id}`} 
+					className={this.setStatusButtonClass()}
+				>
 					<div>{this.setStatusButtonText()}</div>
-				</div>
+				</Link>
 				<div className={this.setStatusColor()}></div>
 			</div>
 		);
