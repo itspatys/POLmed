@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+.doctor-title {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 1em;
+    align-items: center;
+    font-family: 'Nunito';
+}
+.doctor-title > span {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.3em;
+}
+.doctor-title > img {
+    height: 2.5em;
+}

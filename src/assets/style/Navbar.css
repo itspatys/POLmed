@@ -116,13 +116,13 @@
 	left: 100%;
 }
 
-@media screen and (min-width: 651px) {
+@media screen and (min-width: 701px) {
 	.navbar-menu-darken,
 	.navbar-menu {
 		display: none;
 	}
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 700px) {
 	.navbar-desktop {
 		display: none;
 	}
