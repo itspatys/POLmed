@@ -189,7 +189,7 @@ const Appointments = (props) => {
 	return (
 		<div className="appointments-container">
 			<div className="appointments-heaning">
-				Wybierz interesujący Cię dzień spośród najbliższych trzech dni
+				Wybierz interesujący Cię dzień spośród najbliższych dni
 				roboczych:
 			</div>
 			<div className="appointments-dates">

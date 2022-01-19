@@ -4,11 +4,16 @@ import doc2 from "./../assets/img/doctors/doc2.png";
 import doc3 from "./../assets/img/doctors/doc3.png";
 import doc4 from "./../assets/img/doctors/doc4.png";
 import DoctorComponent from "../components/doctorComponent";
+import HelloMessage from "./HelloMessage"
+import DoctorTitle from "../components/DoctorTitle"
 import "./../assets/style/doctorContainer.css";
 class DoctorContainer extends Component {
 	render() {
 		return (
+			<>
+			<HelloMessage />
 			<div className="doctor-container">
+				<DoctorTitle type="ped" />
 				<DoctorComponent
 					title="dr n. med."
 					name="Jerzy Michałek"
@@ -23,6 +28,7 @@ class DoctorContainer extends Component {
 					img={doc2}
 					id={2}
 				/>
+				<DoctorTitle type="fam" />
 				<DoctorComponent
 					title="dr n. med."
 					name="Magdalena Harnaś"
@@ -38,6 +44,7 @@ class DoctorContainer extends Component {
 					id={4}
 				/>
 			</div>
+			</>
 		);
 	}
 }

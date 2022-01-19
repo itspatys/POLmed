@@ -1,6 +1,8 @@
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import logo from "./../assets/img/logo.png";
+import nfzLogo from "./../assets/img/nfz.svg"
+import fbLogo from "./../assets/img/fb.svg"
 import "./../assets/style/Navbar.css";
 
 const Navbar = () => {
@@ -29,9 +31,19 @@ const Navbar = () => {
 				<div className="navbar-desktop">
 					<div className="navbar-link">Wizyty</div>
 					<div className="navbar-link">Cennik</div>
-					<div className="navbar-link">Kontakt</div>
+					<div className="navbar-link">
+						<a href="https://www.nfz.gov.pl/" target="_blank">
+							<img className="navbar-icon" src={nfzLogo} alt="logo NFZ" />
+						</a>
+					</div>
+					<div className="navbar-link">
+						<a href="https://facebook.com/" target="_blank">
+							<img className="navbar-icon" src={fbLogo} alt="logo Facebook" />
+						</a>
+					</div>
 				</div>
 				<div className="navbar-desktop">
+					
 					<div className="navbar-link">Profil</div>
 					<div className="navbar-link navbar-link-logout">Wyloguj</div>
 				</div>
@@ -59,6 +71,15 @@ const Navbar = () => {
 				<div>Cennik</div>
 				<div>Kontakt</div>
 				<div>Profil</div>
+				<div>
+					<a href="https://www.nfz.gov.pl/" target="_blank">
+						<img className="navbar-icon" src={nfzLogo} alt="logo NFZ" />
+					</a>
+					<span style={{paddinLeft: "10px"}}>&emsp;&ensp;</span>
+					<a href="https://facebook.com/" target="_blank">
+						<img className="navbar-icon" src={fbLogo} alt="logo Facebook" />
+					</a>
+				</div>
 				<div className="navbar-link-logout">Wyloguj</div>
 				<div></div>
 			</div>
