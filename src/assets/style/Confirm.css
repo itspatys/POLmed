@@ -1,0 +1,20 @@
+.container {
+	border: 2px solid #0347b5;
+	width: 40%;
+	margin: 0 auto;
+	font-family: "Roboto", sans-serif;
+	border-radius: 2em;
+}
+
+.container > div {
+	text-align: center;
+	font-size: 2em;
+}
+.container > div:first-child {
+	margin-top: 1em;
+}
+.smol-text {
+	font-size: 1em !important;
+	margin-top: 1.5em;
+	margin-bottom: -1em;
+}
