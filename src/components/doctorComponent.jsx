@@ -19,8 +19,8 @@ class DoctorComponent extends Component {
 					</div>
 					<div className="doctor-status">{this.setStatusText()}</div>
 				</div>
-				<Link 
-					to={`/appointments/${this.props.id}`} 
+				<Link
+					to={`/appointments/${this.props.id}`}
 					className={this.setStatusButtonClass()}
 				>
 					<div>{this.setStatusButtonText()}</div>
