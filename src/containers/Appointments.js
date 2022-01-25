@@ -166,6 +166,7 @@ const Appointments = (props) => {
 				service: services[chosenService],
 				date: chosenDate,
 				hour: chosenHour,
+				id: id
 			},
 		});
 	};

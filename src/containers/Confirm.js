@@ -1,4 +1,5 @@
 import { useParams, useLocation, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "../assets/style/Confirm.css";
 
 const Confirm = (props) => {
@@ -40,9 +41,29 @@ const Confirm = (props) => {
 		});
 	};
 
+	const [doctor, setDoctor] = useState("N/A")
+	const fetchDoctor = () => {
+		fetch(`/api/doctors/${state.id}.json`, {
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json",
+			},
+		})
+			.then((response) => {
+				return response.json();
+			})
+			.then((fetchedData) => {
+				setDoctor(fetchedData);
+			});
+	}
+	useEffect(() => {
+		fetchDoctor()
+	}, [])
+
 	return (
 		<>
 			<div className="container">
+				<div className="doctor">{doctor.name}</div>
 				<div className="service">{state.service}</div>
 				<div className="date">{parseDate(state.date)}</div>
 				<div className="hour">{state.hour}</div>
