@@ -170,16 +170,6 @@ const Appointments = (props) => {
 		});
 	};
 
-	const getValues = () => {
-		let vals = {
-			service: services[chosenService],
-			date: chosenDate,
-			hour: chosenHour,
-		};
-		console.log(vals);
-		return vals;
-	};
-
 	useEffect(() => {
 		window.dateOffset = 0;
 		fetchAppointments(id);
@@ -301,9 +291,6 @@ const Appointments = (props) => {
 						: true
 				}
 				onClick={redirect}
-				/* onClick={() => {
-					getValues();
-				}} */
 			>
 				Zarejestruj swoją wizytę
 			</button>
