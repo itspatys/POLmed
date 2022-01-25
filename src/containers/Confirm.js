@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { useParams, useLocation, useNavigate } from "react-router-dom";
 import "../assets/style/Confirm.css";
 
@@ -54,6 +53,15 @@ const Confirm = (props) => {
 					}}
 				>
 					Potwierdź
+				</button>
+				<br></br>
+				<button
+					className="cancel-button"
+					onClick={() => {
+						redirect();
+					}}
+				>
+					Anuluj
 				</button>
 			</div>
 		</>
