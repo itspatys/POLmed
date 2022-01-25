@@ -38,7 +38,7 @@ class DoctorContainer extends Component {
 				/>
 				<DoctorComponent
 					title="dr n. med."
-					name="Jerzy Owsiak"
+					name="Jerzy Ptak"
 					status="true"
 					img={doc4}
 					id={4}
